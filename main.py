@@ -27,7 +27,8 @@ def feed_in():
     for item in root.findall('./channel/item'):
         feed = {}
         for child in item:
-            feed[child.tag] = child.text.encode('utf8')
+            if child.tag != 'enclosure':
+                feed[child.tag] = child.text.encode('utf8')
         feedlist.append(feed)
 
     return feedlist
