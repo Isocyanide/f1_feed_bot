@@ -57,7 +57,7 @@ def notif(context):
 	for i in reversed(range(len(final_list))):
 		link = final_list[i]['link'].decode('ASCII')
 		try:
-			context.bot.send_message(chat_id="@ok_man2", text=link)
+			context.bot.send_message(chat_id="@f1feed", text=link)
 		except BaseException as e:
 			print(e)
 
